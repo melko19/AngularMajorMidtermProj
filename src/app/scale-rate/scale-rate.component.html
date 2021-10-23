@@ -1,0 +1,150 @@
+<div class="container">
+    <div class="card">
+        <div class="head " >
+          <h2>Rate your strongest Character</h2>
+          <hr>
+        </div>
+        <div class="card-body">
+          <div class="row mt-4">
+            <div class="col-md-6">
+
+              <ngb-carousel >
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img [src]="myimage" alt="Random second slide">
+                  </div>
+                  <div class="carousel-caption">
+                    <h3>Monkey D. Luffy</h3>
+                    <p>(Captain)</p>
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img [src]="myimage1" alt="Random second slide">
+                  </div>
+                  <div class="carousel-caption">
+                    <h3>Roronoa Zoro</h3>
+                    <p>(Swordsman and Unofficial first mate)</p>
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img [src]="myimage2" alt="Random second slide">
+                  </div>
+                  <div class="carousel-caption">
+                    <h3>Sanji</h3>
+                    <p>(Chef)</p>
+                  </div>
+                </ng-template>
+
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img [src]="myimage3" alt="Random second slide">
+                  </div>
+                  <div class="carousel-caption">
+                    <h3>Nami</h3>
+                    <p>(Navigator)</p>
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img [src]="myimage4" alt="Random second slide">
+                  </div>
+                  <div class="carousel-caption">
+                    <h3>Ussop</h3>
+                    <p>(Sniper)</p>
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img [src]="myimage5" alt="Random second slide">
+                  </div>
+                  <div class="carousel-caption">
+                    <h3>Tony Tony Chopper</h3>
+                    <p>(Doctor)</p>
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img [src]="myimage6" alt="Random second slide">
+                  </div>
+                  <div class="carousel-caption">
+                    <h3>Nico Robin</h3>
+                    <p>(Archaeologist)</p>
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img [src]="myimage7" alt="Random second slide">
+                  </div>
+                  <div class="carousel-caption">
+                    <h3>Franky</h3>
+                    <p>(Shipwright)</p>
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img [src]="myimage8" alt="Random second slide">
+                  </div>
+                  <div class="carousel-caption">
+                    <h3>Brook</h3>
+                    <p>(Musician)</p>
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <div class="picsum-img-wrapper">
+                    <img [src]="myimage9" alt="Random second slide">
+                  </div>
+                  <div class="carousel-caption">
+                    <h3>Jinbe</h3>
+                    <p>(Helmsman)</p>
+                  </div>
+                </ng-template>
+              </ngb-carousel>
+                            
+            </div>
+
+            <div class="col-md-6 ">
+              <h3>One Piece</h3>
+              
+                <p>
+                  Follows the adventures of Monkey D. Luffy and his pirate crew in order to find the greatest treasure ever left by the legendary Pirate, Gold Roger. 
+                  The famous mystery treasure named "One Piece".
+                </p>
+                <p>There once lived a pirate named Gol D. Roger. He obtained wealth, fame, and power to earn the title of Pirate King. When he was captured and about to be executed,
+                  he revealed that his treasure called One Piece was hidden somewhere at the Grand Line. This made all people set out to search and uncover the One Piece treasure, but no one ever found the location of Gol D. Roger's treasure, and the Grand Line was too dangerous a place to overcome. 
+                  Twenty-two years after Gol D. Roger's death, a boy named Monkey D. Luffy decided to become a pirate and search for Gol D. Roger's treasure to become the next Pirate King.</p>
+
+                <div class="all">
+                  <span  *ngFor="let num of scale; let i = index">
+                      <span *ngIf="rate > i; else elseBlock">
+                        <span *ngIf="i===0">
+                          <button class="btn c1" (click)="onClick(i+1)"></button>
+                        </span>
+                        <span *ngIf="i===1">
+                          <button class="btn c2" (click)="onClick(i+1)"></button>
+                        </span>
+                        <span *ngIf="i===2">
+                          <button class="btn c3" (click)="onClick(i+1)"></button>
+                        </span>
+                        <span *ngIf="i===3">
+                          <button class="btn c4" (click)="onClick(i+1)"></button>
+                        </span>
+                        <span *ngIf="i===4">
+                          <button class="btn c5" (click)="onClick(i+1)"></button>
+                        </span>
+                      </span>
+                      <ng-template #elseBlock>
+                          <button class="btn inactive" (click)="onClick(i+1)"></button>
+                      </ng-template>
+                  </span>
+                </div>
+
+
+                <hr>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
